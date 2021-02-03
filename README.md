@@ -1,5 +1,7 @@
 # isomoprhic-env-webpack-plugin
 
+Webpack plugin and utilities to pass environment variables from server to client via server-side rendering.
+
 ## Installation
 
 ```sh
