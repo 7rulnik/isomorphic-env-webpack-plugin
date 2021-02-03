@@ -35,7 +35,7 @@ With this plugin you can set environment variables on a server and pass it to cl
 
 ## Credits
 
-It was built in [alfabank.ru](https://alfabank.ru) by @aapolkovsky and later rewritten in [aviasales.com](https://aviasales.com). Thanks to these awesome companies to make it open source.
+It was built in [alfabank.ru](https://alfabank.ru) by [@aapolkovsky](https://github.com/aapolkovsky) and later rewritten in [aviasales.com](https://aviasales.com). Thanks to these awesome companies to make it open source.
 
 ## Configuration
 
