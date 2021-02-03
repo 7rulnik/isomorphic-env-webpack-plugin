@@ -5,6 +5,13 @@
 	"typings": "dist/index.d.ts",
 	"repository": "https://github.com/7rulnik/isomorphic-env-webpack-plugin",
 	"author": "Valentin Semirulnik <v7rulnik@gmail.com>",
+	"contributors": [
+		"Arseny Polkovsky <arseniy.polk@gmail.com>"
+	],
+	"bugs": {
+		"url": "https://github.com/7rulnik/isomorphic-env-webpack-plugin/issues"
+	},
+	"homepage": "https://github.com/7rulnik/isomorphic-env-webpack-plugin#readme",
 	"license": "MIT",
 	"scripts": {
 		"format": "prettier --write .",
