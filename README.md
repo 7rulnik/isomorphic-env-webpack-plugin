@@ -16,6 +16,11 @@ npm install --save-dev isomoprhic-env-webpack-plugin
 
 It was built in [alfabank.com](https://alfabank.com) by [@aapolkovsky](https://github.com/aapolkovsky) and later rewritten in [aviasales.com](https://aviasales.com) by [@7rulnik](https://github.com/@7rulnik). Thanks to these awesome companies to make it open source.
 
+<a href="https://alfabank.com">
+  <img src="/media/alfabank.png"
+       alt="Sponsored by Alfa Bank" width="236" height="54">
+</a>
+
 ## Motivation
 
 Sometimes you want to change frontend configuration without rebuilding it.
