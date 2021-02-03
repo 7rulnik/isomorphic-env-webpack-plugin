@@ -94,7 +94,7 @@ It will inject script tag with variables for client-side:
 ```html
 <!-- ... -->
 <script>
-	self.__ISOMORPHIC_ENVS__ = {
+	self.__ISOMORPHIC_ENV__ = {
 		GOOGLE_HOST: 'https://google.com',
 	}
 </script>
@@ -182,7 +182,7 @@ process.env.SOME_ENV // I'm equal on server and client
 
 ## Options
 
-If you don't comfortable with `self.__ISOMORPHIC_ENVS__` you can change it:
+If you don't comfortable with `self.__ISOMORPHIC_ENV__` you can change it:
 
 ```js
 // Pass variableName into plugin
