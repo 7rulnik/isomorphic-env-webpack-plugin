@@ -12,6 +12,10 @@ yarn add -D isomoprhic-env-webpack-plugin
 npm install --save-dev isomoprhic-env-webpack-plugin
 ```
 
+## Credits
+
+It was built in [alfabank.com](https://alfabank.com) by [@aapolkovsky](https://github.com/aapolkovsky) and later rewritten in [aviasales.com](https://aviasales.com) by [@7rulnik](https://github.com/@7rulnik). Thanks to these awesome companies to make it open source.
+
 ## Motivation
 
 Sometimes you want to change frontend configuration without rebuilding it.
@@ -34,10 +38,6 @@ fetch('http://google.com')
 And later, if you need to change `GOOGLE_HOST` you need build your app again.
 
 With this plugin you can set environment variables on a server and pass it to client without rebuilding entire frontend.
-
-## Credits
-
-It was built in [alfabank.com](https://alfabank.com) by [@aapolkovsky](https://github.com/aapolkovsky) and later rewritten in [aviasales.com](https://aviasales.com) by [@7rulnik](https://github.com/@7rulnik). Thanks to these awesome companies to make it open source.
 
 ## Configuration
 
