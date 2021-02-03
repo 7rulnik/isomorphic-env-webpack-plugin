@@ -6,10 +6,10 @@ Webpack plugin and utilities to pass environment variables from server to client
 
 ```sh
 # yarn
-yarn add -D isomoprhic-env-webpack-plugin
+yarn add isomoprhic-env-webpack-plugin
 
 # or npm
-npm install --save-dev isomoprhic-env-webpack-plugin
+npm install isomoprhic-env-webpack-plugin
 ```
 
 ## Credits
