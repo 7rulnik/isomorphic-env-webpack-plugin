@@ -21,6 +21,11 @@ It was built in [alfabank.com](https://alfabank.com) by [@aapolkovsky](https://g
        alt="Sponsored by Alfa Bank" width="30%">
 </a>
 
+<a href="https://aviasales.com">
+  <img src="/media/aviasales.svg"
+       alt="Sponsored by Aviasales" width="30%">
+</a>
+
 ## Motivation
 
 Sometimes you want to change frontend configuration without rebuilding it.
