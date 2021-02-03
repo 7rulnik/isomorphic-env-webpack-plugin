@@ -20,6 +20,8 @@ It was built in [alfabank.com](https://alfabank.com) by [@aapolkovsky](https://g
   <img src="/media/alfabank.svg" alt="Sponsored by Alfa Bank" width="30%">
 </a>
 
+<br/>
+
 <a href="https://aviasales.com">
   <img src="/media/aviasales.svg" alt="Sponsored by Aviasales" width="30%">
 </a>
