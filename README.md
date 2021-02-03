@@ -17,10 +17,10 @@ npm install --save-dev isomoprhic-env-webpack-plugin
 It was built in [alfabank.com](https://alfabank.com) by [@aapolkovsky](https://github.com/aapolkovsky) and later rewritten in [aviasales.com](https://aviasales.com) by [@7rulnik](https://github.com/@7rulnik). Thanks to these awesome companies to make it open source.
 
 <p align="center">
+  <br/>
   <a href="https://alfabank.com">
     <img src="/media/alfabank.svg" alt="Sponsored by Alfa Bank" width="30%">
   </a>
-  <br/>
   <br/>
   <br/>
   <a href="https://aviasales.com">
