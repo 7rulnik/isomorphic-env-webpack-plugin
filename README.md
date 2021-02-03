@@ -16,15 +16,17 @@ npm install --save-dev isomoprhic-env-webpack-plugin
 
 It was built in [alfabank.com](https://alfabank.com) by [@aapolkovsky](https://github.com/aapolkovsky) and later rewritten in [aviasales.com](https://aviasales.com) by [@7rulnik](https://github.com/@7rulnik). Thanks to these awesome companies to make it open source.
 
-<a href="https://alfabank.com">
-  <img src="/media/alfabank.svg" alt="Sponsored by Alfa Bank" width="30%">
-</a>
-
-<br/>
-
-<a href="https://aviasales.com">
-  <img src="/media/aviasales.svg" alt="Sponsored by Aviasales" width="30%">
-</a>
+<p align="center">
+  <a href="https://alfabank.com">
+    <img src="/media/alfabank.svg" alt="Sponsored by Alfa Bank" width="30%">
+  </a>
+  <br/>
+  <br/>
+  <br/>
+  <a href="https://aviasales.com">
+    <img src="/media/aviasales.svg" alt="Sponsored by Aviasales" width="30%">
+  </a>
+</p>
 
 ## Motivation
 
