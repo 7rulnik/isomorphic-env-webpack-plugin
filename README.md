@@ -21,6 +21,10 @@ It was built in [alfabank.com](https://alfabank.com) by [@aapolkovsky](https://g
        alt="Sponsored by Alfa Bank" width="236" height="54">
 </a>
 
+<object data="/media/alfabank.png" type="application/pdf" width="30%">
+    <embed src="/media/alfabank.png"></embed>
+</object>
+
 ## Motivation
 
 Sometimes you want to change frontend configuration without rebuilding it.
