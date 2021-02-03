@@ -70,7 +70,7 @@ console.log(self.__ISOMORPHIC_ENV.GOOGLE_HOST)
 ```js
 import { getScriptTag } from 'isomoprhic-env-webpack-plugin'
 
-const scriptTag = getEnvScriptTag()
+const scriptTag = getScriptTag()
 
 function render() {
 	return `
