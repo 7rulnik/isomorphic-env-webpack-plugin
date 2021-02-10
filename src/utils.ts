@@ -1,3 +1,5 @@
+import stringify from 'fast-json-stable-stringify';
+
 function getEnv(environment: 'client' | 'server') {
 	const obj: { [key: string]: string | undefined } = {}
 
@@ -43,10 +45,10 @@ export function getGlobalVariable(variableName?: string) {
 	return `self.${variableName || defaultGlobalVariable}`
 }
 
+export function getScriptContent(variableName?: string) {
+	return `${getGlobalVariable(variableName)} = ${stringify(getClientEnvs())}`
+}
+
 export function getScriptTag(variableName?: string) {
-	return `<script>${getGlobalVariable(variableName)} = ${JSON.stringify(
-		getClientEnvs(),
-		null,
-		'  '
-	)}</script>`
+	return `<script>${getScriptContent(variableName)}</script>`
 }

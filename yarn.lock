@@ -3434,7 +3434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-json-stable-stringify@npm:2.x, fast-json-stable-stringify@npm:^2.0.0":
+"fast-json-stable-stringify@npm:2.x, fast-json-stable-stringify@npm:^2.0.0, fast-json-stable-stringify@npm:^2.1.0":
   version: 2.1.0
   resolution: "fast-json-stable-stringify@npm:2.1.0"
   checksum: 7df3fabfe445d65953b2d9d9d3958bd895438b215a40fb87dae8b2165c5169a897785eb5d51e6cf0eb03523af756e3d82ea01083f6ac6341fe16db532fee3016
@@ -4496,6 +4496,7 @@ fsevents@^1.2.7:
     "@types/node": ^14.14.22
     "@types/webpack": ^4.41.26
     "@yarnpkg/pnpify": ^2.4.0
+    fast-json-stable-stringify: ^2.1.0
     jest: ^26.6.3
     prettier: ^2.2.1
     rimraf: ^3.0.2

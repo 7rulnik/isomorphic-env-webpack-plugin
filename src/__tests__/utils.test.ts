@@ -4,6 +4,7 @@ import {
 	getClientEnvs,
 	getServerEnvs,
 	getGlobalVariable,
+	getScriptContent,
 	getScriptTag,
 } from '../'
 
@@ -39,6 +40,20 @@ describe('getClientEnvs', () => {
 			VAR_FOR_CLIENT_AND_SERVER: 'VAR_FOR_CLIENT_AND_SERVER',
 			VAR_FOR_SERVER_AND_CLIENT: 'VAR_FOR_SERVER_AND_CLIENT',
 		})
+	})
+})
+
+describe('getScriptContent', () => {
+	test('should use default variable if argument not passed', () => {
+		const result = getScriptContent()
+		expect(result).toMatchSnapshot()
+		expect(result).not.toMatch(/\"VAR_FOR_SERVER\"/)
+	})
+
+	test('should use variable from arguments', () => {
+		const result = getScriptContent('__HELLO_WORLD__')
+		expect(result).toMatchSnapshot()
+		expect(result).not.toMatch(/\"VAR_FOR_SERVER\"/)
 	})
 })
 
