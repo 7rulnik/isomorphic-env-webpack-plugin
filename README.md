@@ -58,7 +58,7 @@ With this plugin you can set environment variables on a server and pass it to cl
 ```js
 const {
 	IsomorphicEnvWebpackPlugin,
-} = require('isomorphic-env-webpack-plugin/plugin')
+} = require('isomorphic-env-webpack-plugin/dist/plugin')
 module.exports = {
 	// ...
 	plugins: [new IsomorphicEnvWebpackPlugin()],
@@ -82,7 +82,7 @@ console.log(self.__ISOMORPHIC_ENV.GOOGLE_HOST)
 ### 2. Inject variables into HTML before your script tags
 
 ```js
-import { getScriptTag } from 'isomorphic-env-webpack-plugin'
+import { getScriptTag } from 'isomorphic-env-webpack-plugin/dist'
 
 const scriptTag = getScriptTag()
 
@@ -121,7 +121,7 @@ It will inject script tag with variables for client-side:
 
 ```js
 // Note, that import should be before any process.env usage
-import 'isomorphic-env-webpack-plugin/runtime'
+import 'isomorphic-env-webpack-plugin/dist/runtime'
 
 import express from 'express'
 // ...
