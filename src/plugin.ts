@@ -30,27 +30,27 @@ export class IsomorphicEnvWebpackPlugin {
 	}
 
 	apply(compiler: Compiler) {
-		compiler.hooks.thisCompilation.tap(pluginName, (compilation) => {
-			const { plugins } = compiler.options
-			const index = plugins.findIndex(
-				(plugin) => plugin instanceof IsomorphicEnvWebpackPlugin
-			)
-			const afterPlugin = plugins.slice(index + 1)
+		const { plugins } = compiler.options
+		const index = plugins.findIndex(
+			(plugin) => plugin instanceof IsomorphicEnvWebpackPlugin
+		)
+		const afterPlugin = plugins.slice(index + 1)
 
-			const definePluginAfter = afterPlugin.some(
-				(plugin) => plugin instanceof DefinePlugin
-			)
-
-			if (definePluginAfter) {
+		const definePluginAfter = afterPlugin.some(
+			(plugin) => plugin instanceof DefinePlugin
+		)
+		
+		if (definePluginAfter) {
+			compiler.hooks.thisCompilation.tap(pluginName, (compilation) => {
 				const ErrorClass = WebpackError ?? Error
 				const error = new ErrorClass(
 					`${pluginName} — Don't use DefinePlugin after ${pluginName}`
 				)
 				error.name = pluginName
 				compilation.errors.push(error)
-			} else {
-				new DefinePlugin(this.defeninions).apply(compiler)
-			}
-		})
+			})
+		}
+
+		new DefinePlugin(this.defeninions).apply(compiler)
 	}
 }
