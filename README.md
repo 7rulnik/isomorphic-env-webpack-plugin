@@ -215,3 +215,31 @@ After that you will have this script tag in your HTML:
 	}
 </script>
 ```
+
+### `filter`
+
+Any of getter-functions (`getClientEnvs`, `getServerEnvs`, `getScriptContent`, `getScriptTag`) accepts optional `filter` to exclude some variables from the result.
+
+```js
+import { getScriptTag } from 'isomorphic-env-webpack-plugin/dist'
+
+const scriptTag = getScriptTag('__ISOMORPHIC_ENV__', {
+	filter: (key, value) => key.includes('ALLOW'),
+})
+
+function render() {
+	return `
+    <!doctype html>
+    <html>
+      <head>
+        ...
+      </head>
+      <body>
+        ...
+        ${scriptTag}
+        <script src="./main.js"></script>
+      </body>
+    </html>
+  `
+}
+```
