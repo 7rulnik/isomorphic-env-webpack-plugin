@@ -1,6 +1,6 @@
-import stringify from 'fast-json-stable-stringify';
+import stringify from 'fast-json-stable-stringify'
 
-type Opts = {filter?: (key: string, value?: string) => boolean}
+type Opts = { filter?: (key: string, value?: string) => boolean }
 
 function getEnv(environment: 'client' | 'server', opts?: Opts) {
 	const filter = opts?.filter ?? (() => true)
@@ -20,7 +20,7 @@ function getEnv(environment: 'client' | 'server', opts?: Opts) {
 		if (!filter(key, value)) {
 			continue
 		}
-		
+
 		let prefix: string = ''
 		if (key.startsWith(prefixForEnvironemt)) {
 			prefix = prefixForEnvironemt
@@ -54,7 +54,9 @@ export function getGlobalVariable(variableName?: string) {
 }
 
 export function getScriptContent(variableName?: string, opts?: Opts) {
-	return `${getGlobalVariable(variableName)} = ${stringify(getClientEnvs(opts))}`
+	return `${getGlobalVariable(variableName)} = ${stringify(
+		getClientEnvs(opts)
+	)}`
 }
 
 export function getScriptTag(variableName?: string, opts?: Opts) {
