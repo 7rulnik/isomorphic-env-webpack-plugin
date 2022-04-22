@@ -1,6 +1,10 @@
 import stringify from 'fast-json-stable-stringify';
 
-function getEnv(environment: 'client' | 'server') {
+type Opts = {filter?: (key: string, value?: string) => boolean}
+
+function getEnv(environment: 'client' | 'server', opts?: Opts) {
+	const filter = opts?.filter ?? (() => true)
+
 	const obj: { [key: string]: string | undefined } = {}
 
 	const prefixConfig = {
@@ -13,6 +17,10 @@ function getEnv(environment: 'client' | 'server') {
 	const prefixForEnvironemt = prefixConfig[environment]
 
 	for (const [key, value] of Object.entries(process.env)) {
+		if (!filter(key, value)) {
+			continue
+		}
+		
 		let prefix: string = ''
 		if (key.startsWith(prefixForEnvironemt)) {
 			prefix = prefixForEnvironemt
@@ -31,12 +39,12 @@ function getEnv(environment: 'client' | 'server') {
 	return obj
 }
 
-export function getClientEnvs() {
-	return getEnv('client')
+export function getClientEnvs(opts?: Opts) {
+	return getEnv('client', opts)
 }
 
-export function getServerEnvs() {
-	return getEnv('server')
+export function getServerEnvs(opts?: Opts) {
+	return getEnv('server', opts)
 }
 
 const defaultGlobalVariable = '__ISOMORPHIC_ENV__'
@@ -45,10 +53,10 @@ export function getGlobalVariable(variableName?: string) {
 	return `self.${variableName || defaultGlobalVariable}`
 }
 
-export function getScriptContent(variableName?: string) {
-	return `${getGlobalVariable(variableName)} = ${stringify(getClientEnvs())}`
+export function getScriptContent(variableName?: string, opts?: Opts) {
+	return `${getGlobalVariable(variableName)} = ${stringify(getClientEnvs(opts))}`
 }
 
-export function getScriptTag(variableName?: string) {
-	return `<script>${getScriptContent(variableName)}</script>`
+export function getScriptTag(variableName?: string, opts?: Opts) {
+	return `<script>${getScriptContent(variableName, opts)}</script>`
 }
