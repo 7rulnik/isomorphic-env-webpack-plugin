@@ -2,20 +2,30 @@ const { expect, test } = require('@jest/globals')
 const path = require('path')
 const { promisify } = require('util')
 const { rimraf } = require('rimraf')
-const webpack5 = promisify(require('webpack'))
+const webpack = require('webpack')
+const promisifiedWebpack = promisify(webpack)
+const rspack = require('@rspack/core')
+const promisifiedRspack = promisify(rspack)
 const { readFile } = require('fs/promises')
 
 beforeAll(() => rimraf(`${__dirname}/dist`))
 
 describe.each([
-	['webpack-5', webpack5],
-])('%s', (webpackVersion, webpack) => {
+	['webpack-5', promisifiedWebpack],
+	['rspack', promisifiedRspack],
+])('%s', (bundlerVersion, bundler) => {
+	const definePluginMap = {
+		'webpack-5': webpack.DefinePlugin,
+		rspack: rspack.DefinePlugin,
+	}
+	const DefinePlugin = definePluginMap[bundlerVersion]
+
 	async function build(plugins, filename) {
-		const webpackConfig = {
+		const config = {
 			context: __dirname,
 			entry: path.resolve(__dirname, '..', 'main.js'),
 			output: {
-				path: path.resolve(__dirname, 'dist', webpackVersion),
+				path: path.resolve(__dirname, 'dist', bundlerVersion),
 				filename,
 			},
 			optimization: {
@@ -26,21 +36,16 @@ describe.each([
 			plugins,
 		}
 
-		return webpack(webpackConfig)
+		return bundler(config)
 	}
 
 	async function checkBundleEquality(filename) {
 		const [actual, expected] = await Promise.all([
-			readFile(`${__dirname}/dist/${webpackVersion}/${filename}`, 'utf8'),
-			readFile(`${__dirname}/fixtures/${webpackVersion}/${filename}`, 'utf8'),
+			readFile(`${__dirname}/dist/${bundlerVersion}/${filename}`, 'utf8'),
+			readFile(`${__dirname}/fixtures/${bundlerVersion}/${filename}`, 'utf8'),
 		])
 		expect(actual).toEqual(expected)
 	}
-
-	jest.resetModules()
-	jest.doMock('webpack', () => {
-		if (webpackVersion === 'webpack-5') return webpack5
-	})
 
 	const { IsomorphicEnvWebpackPlugin } = require('../../src/plugin.ts')
 
@@ -78,7 +83,7 @@ describe.each([
 	test('DefinePlugin before plugin works', async () => {
 		await build(
 			[
-				new webpack.DefinePlugin({
+				new DefinePlugin({
 					'process.env.FOO': JSON.stringify(
 						'process.env.FOO before isomorphic plugin',
 					),
@@ -94,7 +99,7 @@ describe.each([
 		const stats = await build(
 			[
 				new IsomorphicEnvWebpackPlugin(),
-				new webpack.DefinePlugin({
+				new DefinePlugin({
 					'process.env.FOO': JSON.stringify('Replaced FOO by DefinePlugin'),
 				}),
 			],
@@ -106,7 +111,7 @@ describe.each([
 
 		const error = stats.compilation.errors[0]
 		expect(error.name).toBe('IsomorphicEnvWebpackPlugin')
-		expect(error.message).toBe(
+		expect(error.message).toContain(
 			"IsomorphicEnvWebpackPlugin — Don't use DefinePlugin after IsomorphicEnvWebpackPlugin",
 		)
 	})
