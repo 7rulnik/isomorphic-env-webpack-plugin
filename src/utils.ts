@@ -55,7 +55,7 @@ export function getGlobalVariable(variableName?: string) {
 
 export function getScriptContent(variableName?: string, opts?: Opts) {
 	return `${getGlobalVariable(variableName)} = ${stringify(
-		getClientEnvs(opts)
+		getClientEnvs(opts),
 	)}`
 }
 
