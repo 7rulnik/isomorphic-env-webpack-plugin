@@ -977,7 +977,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.14.22":
+"@types/node@npm:*":
   version: 14.14.22
   resolution: "@types/node@npm:14.14.22"
   checksum: 10/c004c946bc7d3b51ae48a7dbfffce358745101062fba0b350f97b154e65eef6dda240a193386fb0dac6bcb04b381f31dffbe00fa64dcea43ecb60819e8239eb8
@@ -990,6 +990,15 @@ __metadata:
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10/05a54af019aae1fa7d7f8e6475071a7486cb8554f638894b5697ef1cad3b5ac6cbdd5fdfe3d8d70b3af7e56e0245b0033a986c00e1c09e80cb584db06e40c0ba
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.13.10":
+  version: 22.13.10
+  resolution: "@types/node@npm:22.13.10"
+  dependencies:
+    undici-types: "npm:~6.20.0"
+  checksum: 10/57dc6a5e0110ca9edea8d7047082e649fa7fa813f79e4a901653b9174141c622f4336435648baced5b38d9f39843f404fa2d8d7a10981610da26066bc8caab48
   languageName: node
   linkType: hard
 
@@ -2984,7 +2993,7 @@ __metadata:
   dependencies:
     "@jest/globals": "npm:^29.7.0"
     "@types/jest": "npm:^29.5.14"
-    "@types/node": "npm:^14.14.22"
+    "@types/node": "npm:^22.13.10"
     "@types/webpack": "npm:^5.28.5"
     "@yarnpkg/pnpify": "npm:^4.1.4"
     fast-json-stable-stringify: "npm:^2.1.0"
@@ -5066,6 +5075,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 10/0097779d94bc0fd26f0418b3a05472410408877279141ded2bd449167be1aed7ea5b76f756562cb3586a07f251b90799bab22d9019ceba49c037c76445f7cddd
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.20.0":
+  version: 6.20.0
+  resolution: "undici-types@npm:6.20.0"
+  checksum: 10/583ac7bbf4ff69931d3985f4762cde2690bb607844c16a5e2fbb92ed312fe4fa1b365e953032d469fa28ba8b224e88a595f0b10a449332f83fa77c695e567dbe
   languageName: node
   linkType: hard
 

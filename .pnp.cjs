@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@jest/globals", "npm:29.7.0"],\
           ["@types/jest", "npm:29.5.14"],\
-          ["@types/node", "npm:14.14.22"],\
+          ["@types/node", "npm:22.13.10"],\
           ["@types/webpack", "npm:5.28.5"],\
           ["@yarnpkg/pnpify", "npm:4.1.4"],\
           ["fast-json-stable-stringify", "npm:2.1.0"],\
@@ -1475,6 +1475,14 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/node", "npm:18.19.80"],\
           ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:22.13.10", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-22.13.10-af5336e62b-57dc6a5e01.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:22.13.10"],\
+          ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3898,7 +3906,7 @@ const RAW_RUNTIME_STATE =
           ["isomorphic-env-webpack-plugin", "workspace:."],\
           ["@jest/globals", "npm:29.7.0"],\
           ["@types/jest", "npm:29.5.14"],\
-          ["@types/node", "npm:14.14.22"],\
+          ["@types/node", "npm:22.13.10"],\
           ["@types/webpack", "npm:5.28.5"],\
           ["@yarnpkg/pnpify", "npm:4.1.4"],\
           ["fast-json-stable-stringify", "npm:2.1.0"],\
@@ -6292,6 +6300,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/undici-types-npm-5.26.5-de4f7c7bb9-0097779d94.zip/node_modules/undici-types/",\
         "packageDependencies": [\
           ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.20.0", {\
+        "packageLocation": "./.yarn/cache/undici-types-npm-6.20.0-bd21e669af-583ac7bbf4.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
       }]\
