@@ -1,7 +1,7 @@
 const { expect, test } = require('@jest/globals')
 const path = require('path')
 const { promisify } = require('util')
-const rimraf = promisify(require('rimraf'))
+const { rimraf } = require('rimraf')
 const webpack5 = promisify(require('webpack'))
 const { readFile } = require('fs/promises')
 
