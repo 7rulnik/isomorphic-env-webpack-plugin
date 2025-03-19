@@ -3,13 +3,11 @@ const path = require('path')
 const { promisify } = require('util')
 const { rimraf } = require('rimraf')
 const webpack5 = promisify(require('webpack'))
-const webpack4 = promisify(require('webpack-4'))
 const { readFile } = require('fs/promises')
 
 beforeAll(() => rimraf(`${__dirname}/dist`))
 
 describe.each([
-	['webpack-4', webpack4],
 	['webpack-5', webpack5],
 ])('%s', (webpackVersion, webpack) => {
 	async function build(plugins, filename) {
@@ -41,7 +39,6 @@ describe.each([
 
 	jest.resetModules()
 	jest.doMock('webpack', () => {
-		if (webpackVersion === 'webpack-4') return webpack4
 		if (webpackVersion === 'webpack-5') return webpack5
 	})
 
