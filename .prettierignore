@@ -3,4 +3,6 @@ coverage
 dist
 .yarn
 .vscode
+.pnp.cjs
 .pnp.js
+.pnp.loader.mjs
