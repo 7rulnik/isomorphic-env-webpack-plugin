@@ -4262,6 +4262,7 @@ __metadata:
     webpack: "npm:^5.98.0"
     webpack-cli: "npm:^6.0.1"
   peerDependencies:
+    "@rspack/core": ^1
     webpack: ^5
   languageName: unknown
   linkType: soft

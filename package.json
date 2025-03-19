@@ -44,8 +44,8 @@
 		"schema-utils": "^4.3.0"
 	},
 	"peerDependencies": {
-		"webpack": "^5",
-		"@rspack/core": "^1"
+		"@rspack/core": "^1",
+		"webpack": "^5"
 	},
 	"engines": {
 		"node": ">= 20"
