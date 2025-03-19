@@ -39,7 +39,7 @@
 	},
 	"dependencies": {
 		"fast-json-stable-stringify": "^2.1.0",
-		"schema-utils": "^3.0.0"
+		"schema-utils": "^4.3.0"
 	},
 	"peerDependencies": {
 		"webpack": "^5"

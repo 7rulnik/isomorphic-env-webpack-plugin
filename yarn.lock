@@ -968,7 +968,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.6":
+"@types/json-schema@npm:*":
   version: 7.0.7
   resolution: "@types/json-schema@npm:7.0.7"
   checksum: 10/ebd22d30ae1fce6e84d271282829abd1a13b03ddb31f47d4c7e1696ae50a0141ec3eeb8520eb91ddba7aa16edea494ecabe555c662e02a4628d2275634a9980c
@@ -1421,15 +1421,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv-keywords@npm:^3.5.2":
-  version: 3.5.2
-  resolution: "ajv-keywords@npm:3.5.2"
-  peerDependencies:
-    ajv: ^6.9.1
-  checksum: 10/d57c9d5bf8849bddcbd801b79bc3d2ddc736c2adb6b93a6a365429589dd7993ddbd5d37c6025ed6a7f89c27506b80131d5345c5b1fa6a97e40cd10a96bcd228c
-  languageName: node
-  linkType: hard
-
 "ajv-keywords@npm:^5.1.0":
   version: 5.1.0
   resolution: "ajv-keywords@npm:5.1.0"
@@ -1441,7 +1432,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^6.12.3, ajv@npm:^6.12.5":
+"ajv@npm:^6.12.3":
   version: 6.12.6
   resolution: "ajv@npm:6.12.6"
   dependencies:
@@ -3079,7 +3070,7 @@ __metadata:
     jest: "npm:^29.7.0"
     prettier: "npm:^3.5.3"
     rimraf: "npm:^6.0.1"
-    schema-utils: "npm:^3.0.0"
+    schema-utils: "npm:^4.3.0"
     ts-jest: "npm:^29.2.6"
     ts-node: "npm:^9.1.1"
     typescript: "npm:^5.8.2"
@@ -4586,17 +4577,6 @@ __metadata:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: 10/7eaf7a0cf37cc27b42fb3ef6a9b1df6e93a1c6d98c6c6702b02fe262d5fcbd89db63320793b99b21cb5348097d0a53de81bd5f4e8b86e20cc9412e3f1cfb4e83
-  languageName: node
-  linkType: hard
-
-"schema-utils@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "schema-utils@npm:3.0.0"
-  dependencies:
-    "@types/json-schema": "npm:^7.0.6"
-    ajv: "npm:^6.12.5"
-    ajv-keywords: "npm:^3.5.2"
-  checksum: 10/ba6ea38dd6b04470285215b421d150fb74dd2aa132786277e063d6aa7d3384688605304d3fe955bc39bfa2bad212bae288490e270141d8323869dfa26f75ab2b
   languageName: node
   linkType: hard
 

@@ -36,7 +36,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:bb0f67b614f0e99daa0d8cd285350aa23b08722b51124a6daec3676aa9c68a0b2522951fbea517f1be373bb6525a8460ab90ec694ddf8b67343c32929ffecbce#npm:29.7.0"],\
           ["prettier", "npm:3.5.3"],\
           ["rimraf", "npm:6.0.1"],\
-          ["schema-utils", "npm:3.0.0"],\
+          ["schema-utils", "npm:4.3.0"],\
           ["ts-jest", "virtual:bb0f67b614f0e99daa0d8cd285350aa23b08722b51124a6daec3676aa9c68a0b2522951fbea517f1be373bb6525a8460ab90ec694ddf8b67343c32929ffecbce#npm:29.2.6"],\
           ["ts-node", "virtual:bb0f67b614f0e99daa0d8cd285350aa23b08722b51124a6daec3676aa9c68a0b2522951fbea517f1be373bb6525a8460ab90ec694ddf8b67343c32929ffecbce#npm:9.1.1"],\
           ["typescript", "patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"],\
@@ -2049,13 +2049,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ajv-keywords", [\
-      ["npm:3.5.2", {\
-        "packageLocation": "./.yarn/cache/ajv-keywords-npm-3.5.2-0e391b70e2-d57c9d5bf8.zip/node_modules/ajv-keywords/",\
-        "packageDependencies": [\
-          ["ajv-keywords", "npm:3.5.2"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["npm:5.1.0", {\
         "packageLocation": "./.yarn/cache/ajv-keywords-npm-5.1.0-ee670a3944-5021f96ab7.zip/node_modules/ajv-keywords/",\
         "packageDependencies": [\
@@ -2070,19 +2063,6 @@ const RAW_RUNTIME_STATE =
           ["@types/ajv", null],\
           ["ajv", "npm:8.17.1"],\
           ["fast-deep-equal", "npm:3.1.3"]\
-        ],\
-        "packagePeers": [\
-          "@types/ajv",\
-          "ajv"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:e97702da819489f096a2f633012a8075909b2037311bea971ba30e003e897ee9522eb9bdac9a523ed06e2c6d6c2e297712663d12cde8819d988854e2ff4aebd9#npm:3.5.2", {\
-        "packageLocation": "./.yarn/__virtual__/ajv-keywords-virtual-59751b9428/0/cache/ajv-keywords-npm-3.5.2-0e391b70e2-d57c9d5bf8.zip/node_modules/ajv-keywords/",\
-        "packageDependencies": [\
-          ["ajv-keywords", "virtual:e97702da819489f096a2f633012a8075909b2037311bea971ba30e003e897ee9522eb9bdac9a523ed06e2c6d6c2e297712663d12cde8819d988854e2ff4aebd9#npm:3.5.2"],\
-          ["@types/ajv", null],\
-          ["ajv", "npm:6.12.6"]\
         ],\
         "packagePeers": [\
           "@types/ajv",\
@@ -4001,7 +3981,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:bb0f67b614f0e99daa0d8cd285350aa23b08722b51124a6daec3676aa9c68a0b2522951fbea517f1be373bb6525a8460ab90ec694ddf8b67343c32929ffecbce#npm:29.7.0"],\
           ["prettier", "npm:3.5.3"],\
           ["rimraf", "npm:6.0.1"],\
-          ["schema-utils", "npm:3.0.0"],\
+          ["schema-utils", "npm:4.3.0"],\
           ["ts-jest", "virtual:bb0f67b614f0e99daa0d8cd285350aa23b08722b51124a6daec3676aa9c68a0b2522951fbea517f1be373bb6525a8460ab90ec694ddf8b67343c32929ffecbce#npm:29.2.6"],\
           ["ts-node", "virtual:bb0f67b614f0e99daa0d8cd285350aa23b08722b51124a6daec3676aa9c68a0b2522951fbea517f1be373bb6525a8460ab90ec694ddf8b67343c32929ffecbce#npm:9.1.1"],\
           ["typescript", "patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"],\
@@ -5725,16 +5705,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["schema-utils", [\
-      ["npm:3.0.0", {\
-        "packageLocation": "./.yarn/cache/schema-utils-npm-3.0.0-e97702da81-ba6ea38dd6.zip/node_modules/schema-utils/",\
-        "packageDependencies": [\
-          ["schema-utils", "npm:3.0.0"],\
-          ["@types/json-schema", "npm:7.0.7"],\
-          ["ajv", "npm:6.12.6"],\
-          ["ajv-keywords", "virtual:e97702da819489f096a2f633012a8075909b2037311bea971ba30e003e897ee9522eb9bdac9a523ed06e2c6d6c2e297712663d12cde8819d988854e2ff4aebd9#npm:3.5.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:4.3.0", {\
         "packageLocation": "./.yarn/cache/schema-utils-npm-4.3.0-6f0a75e2e2-86c5a7c72a.zip/node_modules/schema-utils/",\
         "packageDependencies": [\
