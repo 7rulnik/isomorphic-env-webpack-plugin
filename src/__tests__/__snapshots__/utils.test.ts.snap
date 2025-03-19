@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getScriptContent should use default variable if argument not passed 1`] = `"self.__ISOMORPHIC_ENV__ = {\\"VAR_FOR_CLIENT\\":\\"VAR_FOR_CLIENT\\",\\"VAR_FOR_CLIENT_AND_SERVER\\":\\"VAR_FOR_CLIENT_AND_SERVER\\",\\"VAR_FOR_SERVER_AND_CLIENT\\":\\"VAR_FOR_SERVER_AND_CLIENT\\"}"`;
+exports[`getScriptContent should use default variable if argument not passed 1`] = `"self.__ISOMORPHIC_ENV__ = {"VAR_FOR_CLIENT":"VAR_FOR_CLIENT","VAR_FOR_CLIENT_AND_SERVER":"VAR_FOR_CLIENT_AND_SERVER","VAR_FOR_SERVER_AND_CLIENT":"VAR_FOR_SERVER_AND_CLIENT"}"`;
 
-exports[`getScriptContent should use variable from arguments 1`] = `"self.__HELLO_WORLD__ = {\\"VAR_FOR_CLIENT\\":\\"VAR_FOR_CLIENT\\",\\"VAR_FOR_CLIENT_AND_SERVER\\":\\"VAR_FOR_CLIENT_AND_SERVER\\",\\"VAR_FOR_SERVER_AND_CLIENT\\":\\"VAR_FOR_SERVER_AND_CLIENT\\"}"`;
+exports[`getScriptContent should use variable from arguments 1`] = `"self.__HELLO_WORLD__ = {"VAR_FOR_CLIENT":"VAR_FOR_CLIENT","VAR_FOR_CLIENT_AND_SERVER":"VAR_FOR_CLIENT_AND_SERVER","VAR_FOR_SERVER_AND_CLIENT":"VAR_FOR_SERVER_AND_CLIENT"}"`;
 
-exports[`getScriptTag should use default variable if argument not passed 1`] = `"<script>self.__ISOMORPHIC_ENV__ = {\\"VAR_FOR_CLIENT\\":\\"VAR_FOR_CLIENT\\",\\"VAR_FOR_CLIENT_AND_SERVER\\":\\"VAR_FOR_CLIENT_AND_SERVER\\",\\"VAR_FOR_SERVER_AND_CLIENT\\":\\"VAR_FOR_SERVER_AND_CLIENT\\"}</script>"`;
+exports[`getScriptTag should use default variable if argument not passed 1`] = `"<script>self.__ISOMORPHIC_ENV__ = {"VAR_FOR_CLIENT":"VAR_FOR_CLIENT","VAR_FOR_CLIENT_AND_SERVER":"VAR_FOR_CLIENT_AND_SERVER","VAR_FOR_SERVER_AND_CLIENT":"VAR_FOR_SERVER_AND_CLIENT"}</script>"`;
 
-exports[`getScriptTag should use variable from arguments 1`] = `"<script>self.__HELLO_WORLD__ = {\\"VAR_FOR_CLIENT\\":\\"VAR_FOR_CLIENT\\",\\"VAR_FOR_CLIENT_AND_SERVER\\":\\"VAR_FOR_CLIENT_AND_SERVER\\",\\"VAR_FOR_SERVER_AND_CLIENT\\":\\"VAR_FOR_SERVER_AND_CLIENT\\"}</script>"`;
+exports[`getScriptTag should use variable from arguments 1`] = `"<script>self.__HELLO_WORLD__ = {"VAR_FOR_CLIENT":"VAR_FOR_CLIENT","VAR_FOR_CLIENT_AND_SERVER":"VAR_FOR_CLIENT_AND_SERVER","VAR_FOR_SERVER_AND_CLIENT":"VAR_FOR_SERVER_AND_CLIENT"}</script>"`;
