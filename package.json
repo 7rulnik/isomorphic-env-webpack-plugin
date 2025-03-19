@@ -17,7 +17,8 @@
 		"format": "prettier --write .",
 		"build": "tsc",
 		"test": "jest --config jest.config.js",
-		"example:build": "webpack --config example/webpack.config.js"
+		"example:build:webpack": "webpack --config example/webpack.config.js",
+		"example:build:rspack": "rspack build --config example/webpack.config.js"
 	},
 	"files": [
 		"dist"
