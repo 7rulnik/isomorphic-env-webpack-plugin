@@ -7,9 +7,7 @@ const { readFile } = require('fs/promises')
 
 beforeAll(() => rimraf(`${__dirname}/dist`))
 
-describe.each([
-	['webpack-5', webpack5],
-])('%s', (webpackVersion, webpack) => {
+describe.each([['webpack-5', webpack5]])('%s', (webpackVersion, webpack) => {
 	async function build(plugins, filename) {
 		const webpackConfig = {
 			context: __dirname,
@@ -52,7 +50,7 @@ describe.each([
 	test('variableName option works', async () => {
 		await build(
 			[new IsomorphicEnvWebpackPlugin({ variableName: '__SOME_VARIABLE__' })],
-			'variable-name.js'
+			'variable-name.js',
 		)
 		await checkBundleEquality('variable-name.js')
 	})
@@ -63,14 +61,14 @@ describe.each([
 		try {
 			build(
 				[new IsomorphicEnvWebpackPlugin({ wrongParameter: true })],
-				'validation-error.js'
+				'validation-error.js',
 			)
 		} catch (err) {
 			expect(err.name).toBe('ValidationError')
 			expect(err.message).toBe(
 				`Invalid configuration object. IsomorphicEnvWebpackPlugin has been initialized using a configuration object that does not match the API schema.
  - configuration has an unknown property 'wrongParameter'. These properties are valid:
-   object { variableName? }`
+   object { variableName? }`,
 			)
 		}
 	})
@@ -80,12 +78,12 @@ describe.each([
 			[
 				new webpack.DefinePlugin({
 					'process.env.FOO': JSON.stringify(
-						'process.env.FOO before isomorphic plugin'
+						'process.env.FOO before isomorphic plugin',
 					),
 				}),
 				new IsomorphicEnvWebpackPlugin(),
 			],
-			'define-plugin-before.js'
+			'define-plugin-before.js',
 		)
 		await checkBundleEquality('define-plugin-before.js')
 	})
@@ -98,7 +96,7 @@ describe.each([
 					'process.env.FOO': JSON.stringify('Replaced FOO by DefinePlugin'),
 				}),
 			],
-			'error-define-plugin-after.js'
+			'error-define-plugin-after.js',
 		)
 
 		expect(stats.hasErrors()).toBeTruthy()
@@ -107,7 +105,7 @@ describe.each([
 		const error = stats.compilation.errors[0]
 		expect(error.name).toBe('IsomorphicEnvWebpackPlugin')
 		expect(error.message).toBe(
-			"IsomorphicEnvWebpackPlugin — Don't use DefinePlugin after IsomorphicEnvWebpackPlugin"
+			"IsomorphicEnvWebpackPlugin — Don't use DefinePlugin after IsomorphicEnvWebpackPlugin",
 		)
 	})
 })

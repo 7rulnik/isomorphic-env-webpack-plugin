@@ -2998,7 +2998,7 @@ __metadata:
     "@yarnpkg/pnpify": "npm:^4.1.4"
     fast-json-stable-stringify: "npm:^2.1.0"
     jest: "npm:^29.7.0"
-    prettier: "npm:^2.2.1"
+    prettier: "npm:^3.5.3"
     rimraf: "npm:^3.0.2"
     schema-utils: "npm:^3.0.0"
     ts-jest: "npm:^29.2.6"
@@ -4174,12 +4174,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "prettier@npm:2.2.1"
+"prettier@npm:^3.5.3":
+  version: 3.5.3
+  resolution: "prettier@npm:3.5.3"
   bin:
-    prettier: bin-prettier.js
-  checksum: 10/7bad7ef9cf2da3059a83de0729d480879f5adbe9974419a16a953dee69b2c720ebf1df8d1a713306547a5af8c2b6168a79cd94bda15202de0121348123f7903f
+    prettier: bin/prettier.cjs
+  checksum: 10/7050c08f674d9e49fbd9a4c008291d0715471f64e94cc5e4b01729affce221dfc6875c8de7e66b728c64abc9352eefb7eaae071b5f79d30081be207b53774b78
   languageName: node
   linkType: hard
 
