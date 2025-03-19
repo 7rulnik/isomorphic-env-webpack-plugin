@@ -56,8 +56,7 @@ export class IsomorphicEnvWebpackPlugin {
 
 		if (definePluginAfter) {
 			compiler.hooks.thisCompilation.tap(pluginName, (compilation) => {
-				const ErrorClass = WebpackError ?? Error
-				const error = new ErrorClass(
+				const error = new WebpackError(
 					`${pluginName} — Don't use DefinePlugin after ${pluginName}`,
 				)
 				error.name = pluginName
